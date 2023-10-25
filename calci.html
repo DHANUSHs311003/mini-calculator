@@ -1,0 +1,116 @@
+<!-- 
+Create a mini calculator application, which has following functionalities
+Addition
+Subtraction
+Division
+Multiplication
+Your app should have
+Two input boxes which should take two numbers from the user.
+Four Buttons with following text content
+Add
+Subtract
+Divide
+Multiply
+When user enter 2 and 4 and clicks on multiply button, an alert should come with 8 as ans
+When user enter 8 and 4 and clicks on Divide button,an alert should come with 2 as ans -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Calculator</title>
+    <style>
+        .main {
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+            
+        }
+        #inp1 {
+            height: 35px;
+            font-size: 25px;
+            margin-right: 30px;
+            border-radius: 10px;
+            border-color:cornflowerblue;
+        }
+        #inp1:hover {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-color: aqua;
+        }
+        #inp2 {
+            height: 35px;
+            font-size: 25px;
+            border-radius: 10px;
+            border-color:cornflowerblue;
+        }
+        #inp2:hover {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-color: aqua;
+        }
+        .but {
+            height: 35px;
+            width: auto;
+            font-size: 25px;
+            border-radius: 10px;
+            border-color:cornflowerblue;
+            margin-left: 30px;
+            padding: auto;
+            background-color:whitesmoke ;
+            
+        }
+
+        .but:hover {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-color: aqua;
+            background-color:cornsilk;
+            height: 40px;
+            width: auto;
+        }
+
+        .main-2 {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <input type="number" placeholder="Enter the number" id="inp1">
+        <input type="number"  placeholder="Enter the number" id="inp2">
+    </div>
+    <div class="main-2">
+        <button class="but" onclick="add()">Add</button>
+        <button class="but" onclick="Subtract()">Subtract</button>
+        <button class="but" onclick="multiply()">Multiply</button>
+        <button class="but" onclick="Divide()">Divide</button>
+    </div>
+</body>
+</html>
+<script>
+    function add() {
+        let data1=document.getElementById("inp1").value;
+        let data2=document.getElementById("inp2").value;
+        let result=Number(data1) + Number(data2);
+        alert(result);
+    }
+    function Subtract() {
+        let data1=document.getElementById("inp1").value;
+        let data2=document.getElementById("inp2").value;
+        let result=Number(data1) - Number(data2);
+        alert(result);
+    }
+    function multiply() {
+        let data1=document.getElementById("inp1").value;
+        let data2=document.getElementById("inp2").value;
+        let result=Number(data1) * Number(data2);
+        alert(result);
+    }
+    function Divide() {
+        let data1=document.getElementById("inp1").value;
+        let data2=document.getElementById("inp2").value;
+        let result=Number(data1) / Number(data2);
+        alert(result);
+    }
+</script>
